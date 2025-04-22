@@ -1,8 +1,8 @@
 import { getMoviesByGenre } from "@/src/helper/utility";
 import { useRouter } from "next/router";
-import MovieCard from "@/src/components/MovieCard";
+import MovieList from "@/src/components/MovieList";
 import styles from "@/styles/FilteredMovies.module.css";
-import Link from "next/link";
+import GoBackButton from "@/src/components/GoBackButton";
 
 export default function FilteredMoviesPage({ movies }) {
   const router = useRouter(); 
@@ -10,10 +10,9 @@ export default function FilteredMoviesPage({ movies }) {
 
   return (
     <div className={styles.container}>
+      <GoBackButton/>
       <h1 className={styles.heading}>Genre: {genreName}</h1>
-      <div className={styles.grid}>
-        {movies?.map((movie) => (<Link href={'/movies/' + movie.id}><MovieCard key={movie.id} movie={movie} /></Link>))}
-      </div>
+      <MovieList movies={movies} baseURL={'/movies/'}/>
     </div>
   );
 }

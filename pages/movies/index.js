@@ -1,22 +1,16 @@
-import MovieCard from "@/src/components/MovieCard";
 import { getMovies } from "@/src/helper/utility";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import MovieList from "@/src/components/MovieList";
 import styles from "@/styles/Movies.module.css"; 
+import GoBackButton from "@/src/components/GoBackButton";
 
 export default function MoviesPage({ movies }) {
-  const router = useRouter();
-
+  
   return (
     <div className={styles.container}>
+      <GoBackButton/>
       <h1 className={styles.heading}>All Movies</h1>
-      <div className={styles.grid}>
-        {movies?.map((movie) => (
-          <Link key={movie.id} href={'/movies/' + movie.id}>
-            <MovieCard movie={movie} />
-          </Link>
-        ))}
-      </div>
+      <MovieList movies={movies} baseURL={'/movies/'}/>
     </div>
   );
 }

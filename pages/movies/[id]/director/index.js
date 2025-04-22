@@ -1,3 +1,4 @@
+import GoBackButton from "@/src/components/GoBackButton";
 import Loading from "@/src/components/Loading";
 import { getDirectorByMovieId } from "@/src/helper/utility";
 import styles from '@/styles/DirectorInformationPage.module.css';
@@ -7,6 +8,7 @@ export default function DirectorInformationPage({ director }) {
 
   return (
     <div className={styles.container}>
+      <GoBackButton/>
       <h1 className={styles.title}>Director Information</h1>
       <div className={styles.directorInfo}>
         <h3 className={styles.name}>{director.name}</h3>

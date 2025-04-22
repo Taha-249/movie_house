@@ -1,6 +1,7 @@
 import Loading from '@/src/components/Loading';
 import useSWR from 'swr';
 import styles from '@/styles/Directors.module.css';
+import GoBackButton from '@/src/components/GoBackButton';
 
 const fetcher = (url) => fetch(url).then(res => res.json()).then(res => JSON.parse(res.directors));
 
@@ -10,7 +11,8 @@ export default function DirectorsPage() {
   if (!data) return <Loading />;
 
   return (
-    <div className={styles.pageContainer}>
+    <div className={styles.container}>
+      <GoBackButton/>
       <h1 className={styles.title}>Directors</h1>
       <div className={styles.directorsList}>
         {data.map((director) => (

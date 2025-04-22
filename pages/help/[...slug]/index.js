@@ -1,10 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import styles from '@/styles/SpecificHelpPage.module.css';
+import GoBackButton from '@/src/components/GoBackButton';
 
 export default function SpecificHelpPage({ helpPage }) {
     return (
         <div className={styles.container}>
+            <GoBackButton/>
             <h1 className={styles.pageTitle}>{helpPage.title}</h1>
             {helpPage.content.map((content, ind) => (
                 <div key={ind} className={styles.section}>

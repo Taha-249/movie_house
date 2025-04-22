@@ -1,0 +1,13 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .gridItem {
+    flex: 1 1 calc(50% - 1.5rem); /* 4 per row max */
+    max-width: calc(50% - 1.5rem);
+    min-width: 250px; /* Ensures at least 2 per row */
+    box-sizing: border-box;
+  }
