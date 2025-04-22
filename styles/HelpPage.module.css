@@ -33,7 +33,7 @@
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    color: #0070f3;
+    color: #89008d;
     font-size: 1.1rem;
     font-weight: 500;
     padding: 12px 16px;
@@ -54,7 +54,7 @@
   
   .arrow {
     font-size: 1.3rem;
-    color: #0070f3;
+    color: #89008d;
     transition: transform 0.3s ease;
     scale: 2;
   }

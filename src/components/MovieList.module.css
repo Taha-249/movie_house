@@ -6,8 +6,9 @@
   }
   
   .gridItem {
-    flex: 1 1 calc(50% - 1.5rem); /* 4 per row max */
+    flex: 1 1 calc(50% - 1.5rem); 
     max-width: calc(50% - 1.5rem);
-    min-width: 250px; /* Ensures at least 2 per row */
-    box-sizing: border-box;
+    min-width: 250px; 
+    box-sizing: border-box; 
   }
+  

@@ -30,8 +30,8 @@
 }
 
 .genreButton {
-  background-color: #0070f3;
-  color: white;
+  background-color: #89008d;
+  color: #fee6ff;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   border: none;
@@ -41,5 +41,5 @@
 }
 
 .genreButton:hover {
-  background-color: #005dc1;
+  background-color: #5c0060;
 }

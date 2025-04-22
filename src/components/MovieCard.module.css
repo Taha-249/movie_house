@@ -1,6 +1,6 @@
 .card {
-  background-color: #181818;
-  color: #fff;
+  background-color: #89008d;
+  color: #fee6ff;
   border-radius: 12px;
   padding: 1.2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -10,8 +10,7 @@
   justify-content: space-between;
   height: 100%;
   overflow: hidden;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 100%;
 }
   
   .card:hover {
@@ -29,7 +28,7 @@
     font-size: 1.3rem;
     font-weight: bold;
     margin-bottom: 0.4rem;
-    color: #fff;
+    color: #fee6ff;
   }
   
   .meta {
@@ -45,5 +44,5 @@
     line-height: 1.4;
     color: #bbb;
     margin-top: 0.6rem;
-  }
+  } 
   
