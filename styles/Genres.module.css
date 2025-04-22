@@ -9,8 +9,6 @@
   /* color: rgb(193, 37, 255); */
 }
 
-
-  
   .heading {
     font-size: 2rem;
     font-weight: bold;
@@ -43,7 +41,7 @@
   
   .genreLink {
     text-decoration: none;
-    color: #0070f3;
+    color: #89008d;
     font-weight: 500;
     display: block;
     text-align: center;

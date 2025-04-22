@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #111;
+  background-color: #89008d;
   color: #fff;
   padding: 1rem 2rem;
   position: sticky;
@@ -41,7 +41,7 @@
 }
 
 .menu li:hover {
-  color: #facc15;
+  color: #fee6ff;
 }
 
 @media (max-width: 768px) {
@@ -50,7 +50,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #111;
+    background-color: #89008d;
     flex-direction: column;
     display: none;
   }

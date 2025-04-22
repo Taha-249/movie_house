@@ -22,7 +22,7 @@ export default function GoBackButton() {
     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#444'}
     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#222'}
   >
-    <span style={{ transform: 'scale(1.5)', display: 'inline-block' }}>🢐</span>
+    <span style={{ transform: 'scale(1.5)',verticalAlign: 'top' ,display: 'inline-block' }}>🢐</span>
     Go Back
   </button>
   

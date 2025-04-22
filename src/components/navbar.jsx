@@ -7,7 +7,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.navbarContainer}>
         <div className={styles.logo}>
-          <Link href="/">MovieApp</Link>
+          <Link href="/">Movie House</Link>
         </div>
 
         <div className={styles.menu}>
