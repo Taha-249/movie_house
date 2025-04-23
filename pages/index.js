@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { getTrendingMovies } from "@/src/helper/utility";
+import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import MovieList from "@/src/components/MovieList";
 
@@ -11,16 +12,22 @@ export default function Home({ movies }) {
   };
 
   return (
-    <main className={styles.container}>
-      <h1 className={styles.heading}>Trending Movies</h1>
-
-      <MovieList movies={movies} baseURL={'/movies/'}/>
-      <div className={styles.buttonContainer}>
-        <button onClick={gotoGenresPage} className={styles.genreButton}>
-          Browse Genres
-        </button>
-      </div>
-    </main>
+    <>
+      <Head>
+        <title>Movie House</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={styles.container}>
+        <h1 className={styles.heading}>Trending Movies</h1>
+        <div className={styles.buttonContainer}>
+          <button onClick={gotoGenresPage} className={styles.genreButton}>
+            Browse Genres
+          </button>
+        </div>
+        <MovieList movies={movies} baseURL={'/movies/'}/>
+      </main>
+    </>
   );
 }
 

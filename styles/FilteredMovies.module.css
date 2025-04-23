@@ -6,9 +6,7 @@
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  /* color: rgb(193, 37, 255); */
 }
-
 
 .heading {
   font-size: 2.5rem;
@@ -16,7 +14,7 @@
   margin-bottom: 2rem;
   text-align: center;
   color: #222;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid #006ccc;
 }
 
 .grid {

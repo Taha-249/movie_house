@@ -16,6 +16,7 @@
   margin-bottom: 2rem;
   text-align: center;
   color: #222;
+  border-bottom: 2px solid #006ccc;
 }
 
 .grid {
@@ -27,19 +28,20 @@
 .buttonContainer {
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .genreButton {
-  background-color: #89008d;
+  background: linear-gradient(145deg, #292929, #006ccc);
   color: #fee6ff;
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 100px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.4s ease;
 }
 
 .genreButton:hover {
-  background-color: #5c0060;
+  scale: 1.05;
 }
