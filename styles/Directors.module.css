@@ -1,9 +1,9 @@
 .container {
   padding: 2rem;
   min-height: 100vh;
-  max-width: 1200px;
+  width: 90%;
   margin: auto;
-  background-color: #f9f9f9;
+  background-color: var(--background);
   border-radius: 12px;
 }
 
@@ -11,9 +11,9 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: bold;
-  color: #292929;
+  color: var(--heading-clr);
   margin-bottom: 2rem;
-  border-bottom: 2px solid #006ccc;
+  border-bottom: 2px solid var(--primary-clr);
 }
 
 .directorsList {
@@ -23,7 +23,7 @@
 }
 
 .directorCard {
-  background-color: #fff;
+  background-color: var(--foreground);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 1.5rem;
@@ -41,13 +41,13 @@
 .directorName {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #006ccc;
+  color: var(--primary-text-clr);
   margin-bottom: 1rem;
 }
 
 .directorBio {
   font-size: 1rem;
-  color: #555;
+  color: var(--secondary-text-clr);
   line-height: 1.5;
   text-align: justify;
 }

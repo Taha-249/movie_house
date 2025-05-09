@@ -1,6 +1,5 @@
 import GoBackButton from "@/src/components/GoBackButton";
 import Loading from "@/src/components/Loading";
-import MovieCard from "@/src/components/MovieCard";
 import styles from "@/styles/DirectorInformationPage.module.css";
 import Head from "next/head";
 import Link from "next/link";

@@ -13,11 +13,9 @@ export default function Navbar() {
 
         <div className={styles.menu}>
           <ul>
-            <li>
               <button onClick={toggleTheme} className={styles.toggleButton}>
                 {theme === "light" ? "☀ Light Mode" : "🌙 Dark Mode"}
               </button>
-            </li>
             <li>
               <Link href="/movies">Movies</Link>
             </li>

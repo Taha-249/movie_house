@@ -44,13 +44,15 @@
 .menu li {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--secondary-text-clr);
+  color: var(--navbar-text-clr);
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
+.menu button:hover,
 .menu li:hover {
   color: var(--hover-primary-clr);
+  cursor: pointer;
 }
 
 .menu button {
@@ -59,7 +61,7 @@
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 100px;
-  color: var(--secondary-text-clr);
+  color: var(--navbar-text-clr);
 }
 
 @media (max-width: 768px) {
