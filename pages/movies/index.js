@@ -1,4 +1,3 @@
-import { getMovies } from "@/src/helper/utility";
 import Head from "next/head";
 import MovieList from "@/src/components/MovieList";
 import styles from "@/styles/Movies.module.css"; 
@@ -24,15 +23,15 @@ export default function MoviesPage({ movies }) {
 }
 
 export async function getStaticProps() {
-  const Movies = getMovies();
-  if (!Movies)
-    return {
-      notFound: true,
-    };
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const res = await fetch(`${baseUrl}/api/movies`);
+
+  const movies = await res.json();
 
   return {
     props: {
-      movies: Movies,
+      movies,
     },
     revalidate: 86400,
   };

@@ -3,23 +3,22 @@
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
-  background-color: #f9f9f9;
+  background-color: var(--background);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #292929;
+  color: var(--heading-clr);
   text-align: center;
-  border-bottom: 2px solid #006ccc;
+  border-bottom: 2px solid var(--primary-clr);
 }
 
 .message {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #292929;
+  color: var(--primary-text-clr);
   text-align: center;
 }
 
@@ -29,37 +28,12 @@
   cursor: pointer;
   border: none;
   border-radius: 0.5rem;
-  background-color: #006ccc;
-  color: #ffffff;
+  background-color: var(--primary-clr);
+  color: var(--secondary-text-clr);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: #004b8d;
+  background-color: var(--hover-primary-clr);
   transform: scale(1.05);
-}
-
-.movieCard {
-  background: linear-gradient(135deg, #006ccc, #292929);
-  padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.movieCardTitle {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.movieCardDescription {
-  font-size: 1rem;
-  color: #f9f9f9;
-  line-height: 1.6;
-}
-
-.movieCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }

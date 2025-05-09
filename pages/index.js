@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { getTrendingMovies } from "@/src/helper/utility";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import MovieList from "@/src/components/MovieList";
@@ -32,7 +31,19 @@ export default function Home({ movies }) {
 }
 
 export async function getStaticProps() {
-  const trendingMovies = getTrendingMovies();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const res = await fetch(`${baseUrl}/api/movies`);
+
+  if (!res.ok) {
+    return {
+      notFound: true,
+    };
+  }
+
+  const allMovies = await res.json();
+  const trendingMovies = allMovies.filter(movie => movie.rating >= 8.5);
+
   return {
     props: {
       movies: trendingMovies,

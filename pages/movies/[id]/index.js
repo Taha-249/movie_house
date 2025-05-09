@@ -1,5 +1,4 @@
 import Loading from "@/src/components/Loading"
-import { getMovieByID, getTrendingMovies } from "@/src/helper/utility"
 import Link from "next/link"
 import styles from "@/styles/MovieDetail.module.css"
 import GoBackButton from "@/src/components/GoBackButton"
@@ -34,28 +33,49 @@ export default function MovieDetailPage({movie}) {
 //SSG for trending movies
 //SSR for the rest of the movies
 
-export async function getStaticProps(context){
-    const id = context.params.id
-    const movie = getMovieByID(id)
-    if (!movie)
-        return {
-        notFound: true
+export async function getStaticProps(context) {
+    const id = context.params.id;
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  
+    const res = await fetch(`${baseUrl}/api/movies/${id}`);
+  
+    if (!res.ok) {
+      return {
+        notFound: true,
+      };
     }
+  
+    const movie = await res.json();
+  
     return {
-        props: {
-            movie
-        },
-    }
-}
+      props: {
+        movie,
+      },
+    };
+  }
 
-export async function getStaticPaths(){
-    const trending_movies = getTrendingMovies()
-    const paths = trending_movies.reduce((paths, movie)=>{
-        paths.push({params: {id:movie.id}})
-        return paths
-    }, [])
-    return {
-        paths : paths,
-        fallback: true
+  export async function getStaticPaths() {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  
+    const res = await fetch(`${baseUrl}/api/movies`);
+  
+    if (!res.ok) {
+      return {
+        paths: [],
+        fallback: true,
+      };
     }
-}
+  
+    const movies = await res.json();
+  
+    const trending = movies.filter(movie => movie.rating >= 8.5);
+  
+    const paths = trending.map(movie => ({
+      params: { id: movie.id },
+    }));
+  
+    return {
+      paths,
+      fallback: true,
+    };
+  }

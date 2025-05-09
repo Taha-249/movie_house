@@ -1,8 +1,8 @@
 .goBackButton {
     margin-top: 2rem;
     padding: 0.6rem 1.2rem;
-    background: linear-gradient(145deg, #292929, #006ccc);;
-    color: #fee6ff;
+    background: linear-gradient(145deg, #292929, var(--primary-clr));;
+    color: var(--secondary-text-clr);
     border: none;
     border-radius: 100px;
     cursor: pointer;

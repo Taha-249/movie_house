@@ -3,45 +3,42 @@
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
-  background: #f9f9f9; /*linear-gradient(145deg, #292929, #006ccc); */
+  background: var(--background);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  color: #fee6ff; 
 }
 
 .pageTitle {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #000000;
+  color: var(--heading-clr);
   margin-bottom: 1.5rem;
   text-align: center;
   text-transform: uppercase; 
-  border-bottom: 2px solid #006ccc;
+  border-bottom: 2px solid var(--primary-clr);
 }
 
 .section {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background: linear-gradient(145deg, #292929, #006ccc);
-  border-left: 4px solid #fee6ff;
+  background: linear-gradient(145deg, #292929, var(--primary-clr));
   border-radius: 10px;
   transition: background-color 0.3s ease-in-out, transform 0.3s ease;
 }
 
 .section:hover {
-  background: linear-gradient(145deg, #292929, #339eff); 
+  background: linear-gradient(145deg, #292929, var(--hover-primary-clr)); 
   transform: scale(1.02); 
 }
 
 .sectionTitle {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #fee6ff; 
+  color: var(--secondary-heading-clr); 
   margin-bottom: 0.5rem;
 }
 
 .sectionContent {
-  color: #ccc; 
+  color: var(--secondary-text-clr); 
   line-height: 1.7;
   font-size: 1.1rem;
   padding-left: 1rem;

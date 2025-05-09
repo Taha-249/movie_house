@@ -4,7 +4,7 @@ import styles from '@/styles/Directors.module.css';
 import GoBackButton from '@/src/components/GoBackButton';
 import Head from 'next/head';
 
-const fetcher = (url) => fetch(url).then(res => res.json()).then(res => JSON.parse(res.directors));
+const fetcher = (url) => fetch(url).then(res => res.json())
 
 export default function DirectorsPage() {
   const { data, error } = useSWR('/api/directors', fetcher);

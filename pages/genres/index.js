@@ -1,4 +1,3 @@
-import { getGenres } from "@/src/helper/utility";
 import Link from "next/link";
 import styles from "@/styles/Genres.module.css";
 import GoBackButton from "@/src/components/GoBackButton";
@@ -30,9 +29,19 @@ export default function GenresPage({ genres }) {
 }
 
 export async function getServerSideProps() {
-    const genres = getGenres();
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+
+  const res = await fetch(`${baseUrl}/api/genres`);
+  
+  if (!res.ok) {
     return {
-      props: { genres },
+      notFound: true,
     };
   }
-  
+
+  const genres = await res.json();
+
+  return {
+    props: { genres },
+  };
+}
